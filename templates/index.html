@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Wine Quality</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='wine_icon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Wine Quality</span></h2>
+            <div class='description'>
+    			<p>Model Accuracy 82%</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <h4>Wine Type</h4>
+                <select class="form-input" name="type">
+                    <option value="">Select Type</option>
+                    <option value="0">White Wine</option>
+                    <option value="1">Red Wine</option>
+                </select>
+                <h4>Fixed Acidity</h4>
+                <input class="form-input" type="text" name="fixed acidity" placeholder="eg. 7.1"><br>
+                <h4>Volatile Acidity</h4>
+                <input class="form-input" type="text" name="volatile acidity" placeholder="eg. 0.27"><br>
+                <h4>Citric Acid</h4>
+                <input class="form-input" type="text" name="citric acid" placeholder="eg. 0.36"><br>
+                <h4>Residual Sugar</h4>
+                <input class="form-input" type="text" name="residual sugar" placeholder="eg. 20.7"><br>
+                <h4>Chlorides</h4>
+                <input class="form-input" type="text" name="chlorides" placeholder="eg. 0.045"><br>
+                <h4>Free Sulfur Dioxide</h4>
+                <input class="form-input" type="text" name="free sulfur dioxide" placeholder="eg. 45.0"><br>
+                <h4>Total Sulfur Dioxide</h4>
+                <input class="form-input" type="text" name="total sulfur dioxide" placeholder="eg. 170.0"><br>
+                <h4>Density</h4>
+                <input class="form-input" type="text" name="density" placeholder="eg. 1.0010"><br>
+                <h4>PH</h4>
+                <input class="form-input" type="text" name="pH" placeholder="eg. 3.00"><br>
+                <h4>Sulphates</h4>
+                <input class="form-input" type="text" name="sulphates" placeholder="eg. 0.45"><br>
+                <h4>Alcohol</h4>
+                <input class="form-input" type="text" name="alcohol" placeholder="eg. 8.8"><br>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/itsabhishekhere"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/abhishek-5b642580/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.kaggle.com/iabhishekmaurya"><i class="fab fa-kaggle fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by TeamOutliers.</p>
+       </div>
+
+    </body>
+</html>
